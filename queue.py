@@ -26,13 +26,13 @@ class queue:
 
 
 k = queue(4)
-print k
-print k.isEmpty()
+print (k)
+print (k.isEmpty())
 k.Enqueue(12)
 k.Enqueue(23)
 k.Enqueue(41)
 k.Enqueue(81)
-print k
+print (k)
 print k.isEmpty()
 print k.dequeue()
 print k.dequeue()
