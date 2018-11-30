@@ -34,6 +34,25 @@ class Select:
 
         print("Optimal Size: {}".format(C[0][n-1]+2))
 
+    def dinSelect2(self):
+        n = len(self.S)
+        m = [0 for i in range(n)]
+        m[0] = 1
+        for i in range(1,n):
+            q = 1
+            for j in range(0,i):
+                if self.F[j] <= self.S[i]:
+                    q = max(q,1+m[j])
+            m[i]=q
+
+        print("Optimal Size: {}".format(max(m)))
+
+        for i in range(n-1,-1,-1):
+            k = m.index(max(m))
+            print("process {}: start {} , finish {}".format(k, self.S[k], self.F[k]))
+            m = m[0:k]
+
+
 
     def select(self):
         A = [0]
@@ -50,3 +69,4 @@ s = Select(40)
 print(s)
 s.select()
 s.DinSelect()
+s.dinSelect2()
