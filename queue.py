@@ -33,9 +33,3 @@ k.Enqueue(23)
 k.Enqueue(41)
 k.Enqueue(81)
 print (k)
-print k.isEmpty()
-print k.dequeue()
-print k.dequeue()
-print k
-k.Enqueue(101)
-print k
