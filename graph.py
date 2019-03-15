@@ -26,7 +26,7 @@ class Graph:
 
     def dfs(self):
         stack = []
-        print self.virtexList[0]
+        print(self.virtexList[0])
         self.virtexList[0].wasVisible = True
         stack.append(0)
         while len(stack) != 0:
@@ -35,21 +35,21 @@ class Graph:
                 stack.pop()
             else:
                 stack.append(v)
-                print self.virtexList[v]
+                print (self.virtexList[v])
                 self.virtexList[v].wasVisible = True
         for i in self.virtexList:
             i.wasVisible = False
 
     def glu(self):
         queue = []
-        print self.virtexList[0]
+        print (self.virtexList[0])
         self.virtexList[0].wasVisible = True
         queue.append(0)
         while len(queue)!= 0:
             v = queue.pop(0)
             while self.findM(v)!= -1:
                 v2 = self.findM(v)
-                print self.virtexList[v2]
+                print (self.virtexList[v2])
                 self.virtexList[v2].wasVisible = True
                 queue.append(v2)
 
@@ -68,5 +68,5 @@ f.addEdge(1,3)
 f.addEdge(4,5)
 f.addEdge(5,2)
 f.dfs()
-print "Glu"
+print ("Glu")
 f.glu()
