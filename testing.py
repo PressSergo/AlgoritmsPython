@@ -60,8 +60,8 @@ a = Array(20)
 #print a.search(b)
 #a.sort()
 a.insertSortFor()
-print a
+print(a)
 while True:
-    print a.BinarySearch(int(input("key:")))
+    print (a.BinarySearch(int(input("key:"))))
 
 
